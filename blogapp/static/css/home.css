@@ -1,0 +1,158 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f6f9;
+}
+
+/* Header */
+
+.header{
+    background:#1e293b;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 60px;
+}
+
+.logo h2{
+    color:white;
+}
+
+/* Navigation */
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#60a5fa;
+}
+
+/* Hero Section */
+
+.hero-section{
+    background:#2563eb;
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:18px;
+    margin-top:10px;
+}
+
+/* Posts Container */
+
+.posts-container{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+}
+
+/* Post Card */
+
+.post-card{
+    background:white;
+    padding:25px;
+    margin-bottom:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.post-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:15px;
+}
+
+.post-header h3{
+    color:#2563eb;
+    margin-bottom:5px;
+}
+
+.author{
+    color:#666;
+    font-size:14px;
+}
+
+.post-date{
+    color:gray;
+    font-size:14px;
+}
+
+.article-content{
+    color:#444;
+    line-height:1.8;
+}
+
+/* Empty State */
+
+.empty-posts{
+    background:white;
+    padding:40px;
+    text-align:center;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.empty-posts h2{
+    margin-bottom:10px;
+}
+
+.empty-posts p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.create-btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:12px 22px;
+    border-radius:8px;
+}
+
+.create-btn:hover{
+    background:#1d4ed8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .post-header{
+        flex-direction:column;
+        gap:10px;
+    }
+}

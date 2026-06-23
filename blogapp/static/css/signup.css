@@ -1,0 +1,104 @@
+/* Reset */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+body{
+    font-family:Arial, sans-serif;
+    background:#e08161;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Container */
+.signup-container{
+    width:400px;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.signup-container h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#333;
+}
+
+/* Message */
+.message{
+    text-align:center;
+    color:green;
+    margin-bottom:15px;
+}
+
+/* Inputs */
+.signup-container input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+.signup-container input:focus{
+    outline:none;
+    border-color:#4a90e2;
+    box-shadow:0 0 5px rgba(74,144,226,0.4);
+}
+
+/* Button */
+.signup-container button{
+    width:100%;
+    padding:12px;
+    background:#4a90e2;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.signup-container button:hover{
+    background:#357abd;
+}
+
+/* Login Link */
+.signup-link{
+    margin-top:20px;
+    padding-top:15px;
+    border-top:1px solid #ddd;
+    text-align:center;
+}
+
+.signup-link p{
+    color:#666;
+    font-size:14px;
+}
+
+.signup-link a{
+    color:#4a90e2;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.signup-link a:hover{
+    text-decoration:underline;
+}
+
+/* Mobile */
+@media(max-width:450px){
+
+    .signup-container{
+        width:90%;
+        padding:20px;
+    }
+}

@@ -1,0 +1,99 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<!-- Header -->
+
+<header class="header">
+
+    <div class="logo">
+        <h2>My Blog</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="/home">Home</a>
+        <a href="/newpost">New Post</a>
+        <a href="/mypost">My Posts</a>
+        <a href="/signout">Sign Out</a>
+    </div>
+
+</header>
+
+<!-- Hero Section -->
+
+<section class="hero-section">
+
+    <div class="hero-content">
+
+        <h1>Welcome to My Blog</h1>
+
+        <p>
+            Welcome 
+            <strong>{{ request.user.username }}</strong> 👋
+        </p>
+
+        <p>
+            Share your thoughts, ideas and stories with everyone.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Posts Section -->
+
+<div class="posts-container">
+
+    {% for post in posts %}
+
+    <article class="post-card">
+
+        <div class="post-header">
+
+            <div>
+                <h3>{{ post.title }}</h3>
+                <p class="author">
+                    By {{ post.author }}
+                </p>
+            </div>
+
+            <span class="post-date">
+                {{ post.date_posted|date:"F d, Y" }}
+            </span>
+
+        </div>
+
+        <p class="article-content">
+            {{ post.content }}
+        </p>
+
+    </article>
+
+    {% empty %}
+
+    <div class="empty-posts">
+
+        <h2>No Posts Available</h2>
+
+        <p>
+            Be the first one to create a post.
+        </p>
+
+        <a href="/newpost" class="create-btn">
+            Create Post
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
